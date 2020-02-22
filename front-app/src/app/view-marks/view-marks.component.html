@@ -1,0 +1,22 @@
+<div class="container">
+    <table class="table table-striped">
+      <thead>
+          <tr>
+            <th>Student Name</th>
+            <th>Subject</th>
+            <th>Term</th>
+            <th>Year</th>
+            <th>Marks</th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let mark of marks">
+          <td>{{ mark.st_name }}</td>
+          <td>{{ mark.sb_name }}</td>
+          <td>{{ mark.Term_no }}</td>
+          <td>{{ mark.year }}</td>
+          <td>{{ mark.mark }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

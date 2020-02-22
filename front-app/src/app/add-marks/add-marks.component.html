@@ -1,0 +1,58 @@
+<div class="container">
+    <form (ngSubmit)="insertData()">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="name">Student Name</label>
+            <select name="st_Number" id="name" class="form-control"  [(ngModel)]="marks.st_Number">
+                <option *ngFor="let student of students" [value]="student.st_Number">
+                    {{ student.st_name }}
+                  </option>
+                <!-- <option value="male">Male</option>
+                <option value="female">Female</option> -->
+            </select>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="subject">Subject</label>
+            <select name="sb_code" id="subject" class="form-control"  [(ngModel)]="marks.sb_code">
+                <!-- <option value="">Male</option>
+                -->
+                <option *ngFor="let subject of data" [value]="subject.sb_code">
+                    {{ subject.sb_name }}
+                  </option>
+            </select>
+            
+          </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="year">Year</label>
+                <select name="year" id="year" class="form-control"  [(ngModel)]="marks.year">
+                    <option value="2020" selected>2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    
+                  </select>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="term_no">Term</label>
+              <!-- <input type="text" name="st_Sex" class="form-control" [(ngModel)]="student.st_Sex" id="sex"> -->
+              <select name="Term_no" id="term_no" class="form-control"  [(ngModel)]="marks.Term_no">
+                <option value="1" selected>Term 1</option>
+                <option value="2">Term 2</option>
+                
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="marks">Marks</label>
+              <input type="text" name="mark" class="form-control" [(ngModel)]="marks.mark" id="marks">
+            </div>
+           
+          </div>
+        
+        <button class="btn btn-primary">Add Marks</button>
+      </form>
+</div>
